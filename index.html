@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Mishra | Coming Soon</title>
+
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #111827);
+            height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Loader Screen */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0d0d0d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            flex-direction: column;
+        }
+
+        .loader-circle {
+            width: 60px;
+            height: 60px;
+            border: 5px solid #444;
+            border-top: 5px solid #00d9ff;
+            border-radius: 50%;
+            animation: spin 1.2s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        #loader-text {
+            margin-top: 20px;
+            font-size: 18px;
+            letter-spacing: 3px;
+            color: #00d9ff;
+        }
+
+        /* Main Coming Soon Content */
+        #content {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            animation: fadeIn 1.2s ease-in-out forwards;
+            margin-top: 15%;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 18px;
+            color: #cfcfcf;
+        }
+
+        /* Social Icons */
+        .social {
+            margin-top: 30px;
+        }
+
+        .social a {
+            color: #00d9ff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            p { font-size: 16px; }
+        }
+    </style>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-circle"></div>
+        <div id="loader-text">LOADING...</div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content">
+        <h1>🚀 Aman Mishra</h1>
+        <p>My personal website is coming very soon. Stay tuned for something amazing.</p>
+
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Loader Timeout
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }, 2000); // 2 seconds loader
+        };
+    </script>
+
+</body>
+</html>
